@@ -1,1 +1,93 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))() -- Just leave this part lol
 
+local Window = OrionLib:MakeWindow({Name = "Jenzelit Hub", HidePremium = false, SaveConfig = false, ConfigFolder = "OrionTest"}) -- Script Configs
+
+-- Window
+local Tab = Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Folder
+local Section = Tab:AddSection({
+    Name = "Main"
+})
+
+Tab:AddButton({
+    Name = "Psx Dupe (Screen will go white if worked)",
+    Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Zykex001/psx-dupe/main/psx"))() -- not only loadstrings but much more easy
+      end    
+})
+
+Tab:AddButton({
+    Name = "Jmes Gui",
+    Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))() -- not only loadstrings but much more easy
+      end    
+})
+
+-- Window
+local Tab = Window:MakeTab({
+    Name = "Player",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Folder
+local Section = Tab:AddSection({
+    Name = "Player"
+})
+
+Tab:AddSlider({
+    Name = "Walk Speed",
+    Min = 0,
+    Max = 100,
+    Default = 16,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "Speed",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = (Value)
+    end    
+})
+
+Tab:AddSlider({
+    Name = "Jump Power",
+    Min = 0,
+    Max = 100,
+    Default = 50,
+    Color = Color3.fromRGB(255,255,255),
+    Increment = 1,
+    ValueName = "Power",
+    Callback = function(Value)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Fly Gui (Should work in every game)",
+    Callback = function()
+         loadstring(game:HttpGet("https://raw.githubusercontent.com/Zykex001/psx-dupe/main/Fly%20Gui"))() -- not only loadstrings but much more easy
+      end    
+})
+
+-- Window
+local Tab = Window:MakeTab({
+    Name = "Other",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+-- Folder
+local Section = Tab:AddSection({
+    Name = "Other"
+})
+
+Tab:AddButton({
+    Name = "infinite Yeild",
+    Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()-- not only loadstrings but much more easy
+      end    
+})
